@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import NavBar from './components/NavBar';
 import Header from './components/Header';
 import AboutSection from './components/AboutSection';
-import CVSection from './components/CVSection';
 import ProjectList from './components/ProjectList';
 import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
 
 import './index.css';
 
@@ -26,13 +24,12 @@ function App() {
         return <Header />;
     }
   };
-  
+
 
   return (
     <div className="container">
       <NavBar setActiveSection={setActiveSection} />
       {renderSection()}
-      <Footer />
     </div>
   );
 }

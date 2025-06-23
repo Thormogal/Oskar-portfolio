@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import NavBar from './components/NavBar';
-import Header from './components/Header';
 import AboutSection from './components/AboutSection';
 import ProjectList from './components/ProjectList';
 import ContactSection from './components/ContactSection';
@@ -8,7 +7,8 @@ import ContactSection from './components/ContactSection';
 import './index.css';
 
 function App() {
-  const [activeSection, setActiveSection] = useState<string>('home');
+  // 👉 startsida = 'about'
+  const [activeSection, setActiveSection] = useState<string>('about');
 
   const renderSection = () => {
     switch (activeSection) {
@@ -21,10 +21,9 @@ function App() {
       case 'cv':
         return null;
       default:
-        return <Header />;
+        return <AboutSection />;
     }
   };
-
 
   return (
     <div className="container">
